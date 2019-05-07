@@ -10,9 +10,10 @@ ssh-add -K ~/path_to_pem/my_pem_file.pem
 ```
 (make sure permissions are set right with chmod 700 my_pem_file.pem)
 - Login to AWS instance with ssh ubuntu@##.###.##.###
-- Mount the AWS instance for easy local access:
-  - Install FUSE and SSHFS on Mac (https://osxfuse.github.io/)
-  - Mount AWS instance: sudo sshfs ubuntu@##.###.##.###:~ ~/path_to_mnt -o allow_other,defer_permissions
+- Mount the AWS instance for easy local access (install FUSE and SSHFS on Mac at https://osxfuse.github.io/):
+```bash
+sudo sshfs ubuntu@##.###.##.###:~ ~/path_to_mnt -o allow_other,defer_permissions
+```
 
 ### Installing a deep learning environment
 - Activate a PyTorch deep learning environment:
